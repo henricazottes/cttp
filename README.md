@@ -64,42 +64,29 @@ bundle install
 ```
 
 ## Usage
-```
-$ ./cttp.rb -h
-NAME
-        cttp - convert image to (thermal) printable data
 
-SYNOPSIS
-        cttp FILE [OPTION]...
+**-h, --help**:
+    show help
 
-DESCRIPTION
-        Convert To Thermal Printable data (cttp); Convert image file to black and white only and create data file printable by thermal printer.
+**-o filename, --output filename**:
+    Save data in an ouput file named filename; must follow 8.3 format (8 max char name + 3 max char extension max) for arduino SD module compatibility
+    Default filename is data
 
-        FILE: The file to convert.
+**-a, --array**:
+    Print the data in a C++ array form like:
+    data: {0x00, ...}
 
-        -h, --help
-            show help
+**-i, --info**:
+    Print converted image dimensions and size
 
-        -o filename, --output filename
-            Save data in an ouput file named filename; must follow 8.3 format (8 max char name + 3 max char extension max) for arduino SD module compatibility
-            Default filename is data
+**-r x, --rotate x**:
+    rotate the image by x degrees
 
-        -a, --array
-            Print the data in a C++ array form like:
-            data: {0x00, ...}
+**--flip_h**:
+    flip the image horizontally
 
-        -i, --info
-            Print converted image dimensions and size
-
-        -r x, --rotate x
-            rotate the image by x degrees
-
-        --flip_h
-            flip the image horizontally
-
-        --flip_v
-            flip the image vertically
-```
+**--flip_v**:
+    flip the image vertically
 
 **Important**: Image size may be changed so the width is divisible by 8 for compatibility purpose with the printer. Use `-i` to output the final dimensions.
 
