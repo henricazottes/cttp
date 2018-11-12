@@ -22,7 +22,9 @@
 # Prerequisites
 ## ImageMagick
 Installation:
-    sudo apt install imagemagick libmagick++-dev
+```
+sudo apt install imagemagick libmagick++-dev
+```
 
 Verification:
 ```
