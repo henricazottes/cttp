@@ -1,4 +1,23 @@
+![Printed cat](logo.jpg)
 *CTTP* which stand for convert to thermal printer (file) is a tiny command line program to convert images files to data files which can by printed by a thermal printer. It also provide several builtin tools to manipultate input image.
+
+# Table of content
+
+<!-- TOC -->
+
+- [Table of content](#table-of-content)
+- [Prerequisites](#prerequisites)
+    - [ImageMagick](#imagemagick)
+    - [Ruby](#ruby)
+    - [Bundler](#bundler)
+- [CTTP](#cttp)
+    - [Installation](#installation)
+    - [Usage](#usage)
+        - [In a file](#in-a-file)
+        - [In memory](#in-memory)
+        - [Arduino examples:](#arduino-examples)
+
+<!-- /TOC -->
 
 # Prerequisites
 ## ImageMagick
