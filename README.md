@@ -15,7 +15,7 @@
     - [Usage](#usage)
         - [In a file](#in-a-file)
         - [In memory](#in-memory)
-        - [Arduino examples:](#arduino-examples)
+        - [Arduino examples](#arduino-examples)
 
 <!-- /TOC -->
 
@@ -109,9 +109,9 @@ Use `-o` to create a data file ready to be copied on an SD card. See example bel
 ### In memory
 Use `-a` to output the data array. Copy and paste it in your arduino sketch as follow.
 
-### Arduino examples:
+### Arduino examples
 
-First run cttp with test image:
+First run cttp with your image:
 ```
 $ ./cttp.rb img_test.png -o -i -a
 data:   {0xf0,0x01,0xf0,0x00,0xf0,0x00,0xf0,0x00,0x0f,0x00,0x0f,0x00,0x0f,0x00,0x0e,0x00,0x00,0xff,0x00,0xff,0x00,0xff,0x00,0xff,0x00,0xff,0x00,0xff,0x00,0xff,0x00,0xff}
@@ -149,9 +149,9 @@ void setup() {
   printer.begin();        // Init printer (same regardless of serial type)
 
   // From file on SD card
-  File ticketh = SD.open("data", FILE_READ);
-  printer.printBitmap(16, 16, dynamic_cast<Stream*>(&ticketh));
-  ticketh.close();
+  File data = SD.open("data", FILE_READ);
+  printer.printBitmap(16, 16, dynamic_cast<Stream*>(&data));
+  data.close();
   printer.feed(2);
 
   // From array directly in memory
